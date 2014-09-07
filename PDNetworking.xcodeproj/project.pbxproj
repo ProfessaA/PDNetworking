@@ -1,0 +1,927 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B846BA1219BEAD2C00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B846BA0919BEAD0D00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a */; };
+		B846BA1419BEB51900BF47F4 /* PDHTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */; };
+		B846BA1719BEB54400BF47F4 /* PDHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */; };
+		B846BA1919BEBEF000BF47F4 /* PDJSONClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */; };
+		B846BA1C19BEC17200BF47F4 /* PDJSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */; };
+		B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */; };
+		B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */; };
+		B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */; };
+		B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */; };
+		B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */; };
+		B84A8AE519BE408F00E34377 /* PDRequester.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B87824A419BD1FE600E041FB /* PDRequester.h */; };
+		B84A8AE619BE409E00E34377 /* PDURLSessionClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B878249419BD1DF100E041FB /* PDURLSessionClient.h */; };
+		B84A8AE719BE40A300E34377 /* PDURLSessionClientDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */; };
+		B84A8AEB19BE416F00E34377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248919BD1C4800E041FB /* Foundation.framework */; };
+		B84A8B0E19BE46C000E34377 /* libDeferred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B878249F19BD1ED900E041FB /* libDeferred.a */; };
+		B85EDEA319BCFDC9001B6AF6 /* PDNetworking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */; };
+		B85EDEA519BCFDC9001B6AF6 /* PDNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */; };
+		B878247F19BD1B5C00E041FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B878247D19BD1B5C00E041FB /* InfoPlist.strings */; };
+		B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */; };
+		B878248A19BD1C4800E041FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248919BD1C4800E041FB /* Foundation.framework */; };
+		B878248E19BD1C6400E041FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248D19BD1C6400E041FB /* UIKit.framework */; };
+		B878249319BD1CB900E041FB /* libCedar-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB1EEB19BD0074009BB456 /* libCedar-StaticLib.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		B878249619BD1DF100E041FB /* PDURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B878249519BD1DF100E041FB /* PDURLSessionClient.m */; };
+		B8A40BA719BE4A3700C66E79 /* libPDNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */; };
+		B8A40BAB19BE8AE100C66E79 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248F19BD1C7600E041FB /* SenTestingKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B846BA0219BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA96B49168B506500861DF1;
+			remoteInfo = "Foundation+PivotalCore";
+		};
+		B846BA0419BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA96C54168B636E00861DF1;
+			remoteInfo = "Foundation+PivotalCore-StaticLib";
+		};
+		B846BA0619BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA96B9E168B541900861DF1;
+			remoteInfo = "Foundation+PivotalSpecHelper";
+		};
+		B846BA0819BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA96C64168B63BD00861DF1;
+			remoteInfo = "Foundation+PivotalSpecHelper-StaticLib";
+		};
+		B846BA0A19BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA96BD3168B561500861DF1;
+			remoteInfo = FoundationSpec;
+		};
+		B846BA0C19BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEA96C74168B640B00861DF1;
+			remoteInfo = "Foundation-StaticLibSpec";
+		};
+		B846BA0E19BEAD0D00BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE2A04B018D3E6AA00D4FD96;
+			remoteInfo = "Foundation-StaticLibSpecBundle";
+		};
+		B846BA1019BEAD2100BF47F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEA96C63168B63BD00861DF1;
+			remoteInfo = "Foundation+PivotalSpecHelper-StaticLib";
+		};
+		B84A8B0C19BE46B700E34377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B878249719BD1ED900E041FB /* Deferred.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E18A7B1415674D9B0083D745;
+			remoteInfo = Deferred;
+		};
+		B878249119BD1C8B00E041FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AEEE222811DC2B0600029872;
+			remoteInfo = "Cedar-StaticLib";
+		};
+		B878249E19BD1ED900E041FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B878249719BD1ED900E041FB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E18A7B1515674D9B0083D745;
+			remoteInfo = Deferred;
+		};
+		B87824A019BD1ED900E041FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B878249719BD1ED900E041FB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E18A7B3015674EC20083D745;
+			remoteInfo = "Deferred-OSX";
+		};
+		B87824A219BD1ED900E041FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B878249719BD1ED900E041FB /* Deferred.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E18A7B4415674ED10083D745;
+			remoteInfo = Specs;
+		};
+		B8A40BA519BE4A3200C66E79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85EDE9219BCFDC9001B6AF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B85EDE9919BCFDC9001B6AF6;
+			remoteInfo = PDNetworking;
+		};
+		B8DB1EE419BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE1FB611DC271300029872;
+			remoteInfo = Cedar;
+		};
+		B8DB1EE619BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE218611DC28E200029872;
+			remoteInfo = Specs;
+		};
+		B8DB1EE819BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96A07F0813F276640021974D;
+			remoteInfo = FocusedSpecs;
+		};
+		B8DB1EEA19BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE222911DC2B0600029872;
+			remoteInfo = "Cedar-StaticLib";
+		};
+		B8DB1EEC19BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEEE227611DC2CF900029872;
+			remoteInfo = iOSSpecs;
+		};
+		B8DB1EEE19BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE02E7E4184EABCD00414F19;
+			remoteInfo = iOSFrameworkSpecs;
+		};
+		B8DB1EF019BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B5F9F6144A81A7000A6A5D;
+			remoteInfo = OCUnitApp;
+		};
+		B8DB1EF219BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B5FA11144A81A8000A6A5D;
+			remoteInfo = OCUnitAppTests;
+		};
+		B8DB1EF419BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F45A3DD180E4796003C1E36;
+			remoteInfo = XCUnitAppTests;
+		};
+		B8DB1EF619BD0074009BB456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96158A86144A915E005895CE;
+			remoteInfo = OCUnitAppLogicTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B85EDE9819BCFDC9001B6AF6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B85EDEA319BCFDC9001B6AF6 /* PDNetworking.h in CopyFiles */,
+				B84A8AE519BE408F00E34377 /* PDRequester.h in CopyFiles */,
+				B84A8AE619BE409E00E34377 /* PDURLSessionClient.h in CopyFiles */,
+				B84A8AE719BE40A300E34377 /* PDURLSessionClientDelegate.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Foundation.xcodeproj; path = PivotalCoreKit/Foundation/Foundation.xcodeproj; sourceTree = "<group>"; };
+		B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDHTTPClientSpec.mm; sourceTree = "<group>"; };
+		B846BA1519BEB54400BF47F4 /* PDHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHTTPClient.h; sourceTree = "<group>"; };
+		B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDHTTPClient.m; sourceTree = "<group>"; };
+		B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDJSONClientSpec.mm; sourceTree = "<group>"; };
+		B846BA1A19BEC17200BF47F4 /* PDJSONClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJSONClient.h; sourceTree = "<group>"; };
+		B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJSONClient.m; sourceTree = "<group>"; };
+		B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDDomainObjectClientSpec.mm; sourceTree = "<group>"; };
+		B846BA2119BEC5A900BF47F4 /* PDDomainObjectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDomainObjectClient.h; sourceTree = "<group>"; };
+		B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDomainObjectClient.m; sourceTree = "<group>"; };
+		B846BA2419BEC6EC00BF47F4 /* PDDeserializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDeserializer.h; sourceTree = "<group>"; };
+		B846BA2519BEC7C200BF47F4 /* PDJSONRequestProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJSONRequestProvider.h; sourceTree = "<group>"; };
+		B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJSONRequestProvider.m; sourceTree = "<group>"; };
+		B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDRequestProviderSpec.mm; sourceTree = "<group>"; };
+		B846BA2A19BECCCA00BF47F4 /* PDRequestParametersSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequestParametersSerializer.h; sourceTree = "<group>"; };
+		B846BA2B19BECD4100BF47F4 /* PDNetworkResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDNetworkResource.h; sourceTree = "<group>"; };
+		B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequestProvider.h; sourceTree = "<group>"; };
+		B846BA2D19BEDB2D00BF47F4 /* PDNetworkResourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNetworkResourceProvider.h; sourceTree = "<group>"; };
+		B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNetworkResourceProvider.m; sourceTree = "<group>"; };
+		B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPDNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B85EDEA119BCFDC9001B6AF6 /* PDNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDNetworking-Prefix.pch"; sourceTree = "<group>"; };
+		B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDNetworking.h; sourceTree = "<group>"; };
+		B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDNetworking.m; sourceTree = "<group>"; };
+		B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDURLSessionClientDelegate.h; sourceTree = "<group>"; };
+		B878247119BD1B5C00E041FB /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B878247E19BD1B5C00E041FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PDURLSessionClientSpec.mm; sourceTree = "<group>"; };
+		B878248919BD1C4800E041FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B878248D19BD1C6400E041FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B878248F19BD1C7600E041FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B878249419BD1DF100E041FB /* PDURLSessionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDURLSessionClient.h; sourceTree = "<group>"; };
+		B878249519BD1DF100E041FB /* PDURLSessionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDURLSessionClient.m; sourceTree = "<group>"; };
+		B878249719BD1ED900E041FB /* Deferred.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Deferred.xcodeproj; path = deferred/Deferred.xcodeproj; sourceTree = "<group>"; };
+		B87824A419BD1FE600E041FB /* PDRequester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequester.h; sourceTree = "<group>"; };
+		B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B85EDE9719BCFDC9001B6AF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84A8AEB19BE416F00E34377 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B878246D19BD1B5C00E041FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8A40BAB19BE8AE100C66E79 /* SenTestingKit.framework in Frameworks */,
+				B878248A19BD1C4800E041FB /* Foundation.framework in Frameworks */,
+				B878248E19BD1C6400E041FB /* UIKit.framework in Frameworks */,
+				B878249319BD1CB900E041FB /* libCedar-StaticLib.a in Frameworks */,
+				B84A8B0E19BE46C000E34377 /* libDeferred.a in Frameworks */,
+				B8A40BA719BE4A3700C66E79 /* libPDNetworking.a in Frameworks */,
+				B846BA1219BEAD2C00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B846B9EA19BEAD0D00BF47F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B846BA0319BEAD0D00BF47F4 /* Foundation+PivotalCore.framework */,
+				B846BA0519BEAD0D00BF47F4 /* libFoundation+PivotalCore-StaticLib.a */,
+				B846BA0719BEAD0D00BF47F4 /* Foundation+PivotalSpecHelper.framework */,
+				B846BA0919BEAD0D00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a */,
+				B846BA0B19BEAD0D00BF47F4 /* FoundationSpec */,
+				B846BA0D19BEAD0D00BF47F4 /* Foundation-StaticLibSpec.app */,
+				B846BA0F19BEAD0D00BF47F4 /* Foundation-StaticLibSpecBundle.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B85EDE9119BCFDC9001B6AF6 = {
+			isa = PBXGroup;
+			children = (
+				B8DB1ED519BD0026009BB456 /* Externals */,
+				B85EDE9C19BCFDC9001B6AF6 /* Frameworks */,
+				B85EDE9F19BCFDC9001B6AF6 /* PDNetworking */,
+				B85EDE9B19BCFDC9001B6AF6 /* Products */,
+				B878247A19BD1B5C00E041FB /* Specs */,
+			);
+			sourceTree = "<group>";
+		};
+		B85EDE9B19BCFDC9001B6AF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */,
+				B878247119BD1B5C00E041FB /* Specs.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B85EDE9C19BCFDC9001B6AF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B878248F19BD1C7600E041FB /* SenTestingKit.framework */,
+				B878248D19BD1C6400E041FB /* UIKit.framework */,
+				B878248919BD1C4800E041FB /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B85EDE9F19BCFDC9001B6AF6 /* PDNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B846BA2419BEC6EC00BF47F4 /* PDDeserializer.h */,
+				B846BA2119BEC5A900BF47F4 /* PDDomainObjectClient.h */,
+				B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */,
+				B846BA1519BEB54400BF47F4 /* PDHTTPClient.h */,
+				B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */,
+				B846BA1A19BEC17200BF47F4 /* PDJSONClient.h */,
+				B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */,
+				B846BA2519BEC7C200BF47F4 /* PDJSONRequestProvider.h */,
+				B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */,
+				B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */,
+				B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */,
+				B846BA2B19BECD4100BF47F4 /* PDNetworkResource.h */,
+				B846BA2D19BEDB2D00BF47F4 /* PDNetworkResourceProvider.h */,
+				B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */,
+				B87824A419BD1FE600E041FB /* PDRequester.h */,
+				B846BA2A19BECCCA00BF47F4 /* PDRequestParametersSerializer.h */,
+				B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */,
+				B878249419BD1DF100E041FB /* PDURLSessionClient.h */,
+				B878249519BD1DF100E041FB /* PDURLSessionClient.m */,
+				B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */,
+				B85EDEA019BCFDC9001B6AF6 /* Supporting Files */,
+			);
+			path = PDNetworking;
+			sourceTree = "<group>";
+		};
+		B85EDEA019BCFDC9001B6AF6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B85EDEA119BCFDC9001B6AF6 /* PDNetworking-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B878247A19BD1B5C00E041FB /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */,
+				B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */,
+				B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */,
+				B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */,
+				B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */,
+				B878247B19BD1B5C00E041FB /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		B878247B19BD1B5C00E041FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B878247D19BD1B5C00E041FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B878249819BD1ED900E041FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B878249F19BD1ED900E041FB /* libDeferred.a */,
+				B87824A119BD1ED900E041FB /* libDeferred-OSX.a */,
+				B87824A319BD1ED900E041FB /* Specs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8DB1ED519BD0026009BB456 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */,
+				B878249719BD1ED900E041FB /* Deferred.xcodeproj */,
+				B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		B8DB1ED719BD0073009BB456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8DB1EE519BD0074009BB456 /* Cedar.framework */,
+				B8DB1EE719BD0074009BB456 /* Specs */,
+				B8DB1EE919BD0074009BB456 /* FocusedSpecs */,
+				B8DB1EEB19BD0074009BB456 /* libCedar-StaticLib.a */,
+				B8DB1EED19BD0074009BB456 /* iOSSpecs.app */,
+				B8DB1EEF19BD0074009BB456 /* iOSFrameworkSpecs.app */,
+				B8DB1EF119BD0074009BB456 /* OCUnitApp.app */,
+				B8DB1EF319BD0074009BB456 /* OCUnitAppTests.octest */,
+				B8DB1EF519BD0074009BB456 /* XCUnitAppTests.xctest */,
+				B8DB1EF719BD0074009BB456 /* OCUnitAppLogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B85EDE9919BCFDC9001B6AF6 /* PDNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B85EDEBD19BCFDCA001B6AF6 /* Build configuration list for PBXNativeTarget "PDNetworking" */;
+			buildPhases = (
+				B85EDE9619BCFDC9001B6AF6 /* Sources */,
+				B85EDE9719BCFDC9001B6AF6 /* Frameworks */,
+				B85EDE9819BCFDC9001B6AF6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDNetworking;
+			productName = PDNetworking;
+			productReference = B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B878247019BD1B5C00E041FB /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B878248619BD1B5D00E041FB /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				B878246C19BD1B5C00E041FB /* Sources */,
+				B878246D19BD1B5C00E041FB /* Frameworks */,
+				B878246E19BD1B5C00E041FB /* Resources */,
+				B878246F19BD1B5C00E041FB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8A40BA619BE4A3200C66E79 /* PBXTargetDependency */,
+				B878249219BD1C8B00E041FB /* PBXTargetDependency */,
+				B846BA1119BEAD2100BF47F4 /* PBXTargetDependency */,
+				B84A8B0D19BE46B700E34377 /* PBXTargetDependency */,
+			);
+			name = Specs;
+			productName = Tests;
+			productReference = B878247119BD1B5C00E041FB /* Specs.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B85EDE9219BCFDC9001B6AF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Prairiedogg International Limited";
+			};
+			buildConfigurationList = B85EDE9519BCFDC9001B6AF6 /* Build configuration list for PBXProject "PDNetworking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B85EDE9119BCFDC9001B6AF6;
+			productRefGroup = B85EDE9B19BCFDC9001B6AF6 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B8DB1ED719BD0073009BB456 /* Products */;
+					ProjectRef = B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */;
+				},
+				{
+					ProductGroup = B878249819BD1ED900E041FB /* Products */;
+					ProjectRef = B878249719BD1ED900E041FB /* Deferred.xcodeproj */;
+				},
+				{
+					ProductGroup = B846B9EA19BEAD0D00BF47F4 /* Products */;
+					ProjectRef = B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B85EDE9919BCFDC9001B6AF6 /* PDNetworking */,
+				B878247019BD1B5C00E041FB /* Specs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B846BA0319BEAD0D00BF47F4 /* Foundation+PivotalCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "Foundation+PivotalCore.framework";
+			remoteRef = B846BA0219BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B846BA0519BEAD0D00BF47F4 /* libFoundation+PivotalCore-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libFoundation+PivotalCore-StaticLib.a";
+			remoteRef = B846BA0419BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B846BA0719BEAD0D00BF47F4 /* Foundation+PivotalSpecHelper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "Foundation+PivotalSpecHelper.framework";
+			remoteRef = B846BA0619BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B846BA0919BEAD0D00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libFoundation+PivotalSpecHelper-StaticLib.a";
+			remoteRef = B846BA0819BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B846BA0B19BEAD0D00BF47F4 /* FoundationSpec */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = FoundationSpec;
+			remoteRef = B846BA0A19BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B846BA0D19BEAD0D00BF47F4 /* Foundation-StaticLibSpec.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Foundation-StaticLibSpec.app";
+			remoteRef = B846BA0C19BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B846BA0F19BEAD0D00BF47F4 /* Foundation-StaticLibSpecBundle.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Foundation-StaticLibSpecBundle.octest";
+			remoteRef = B846BA0E19BEAD0D00BF47F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B878249F19BD1ED900E041FB /* libDeferred.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDeferred.a;
+			remoteRef = B878249E19BD1ED900E041FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B87824A119BD1ED900E041FB /* libDeferred-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libDeferred-OSX.a";
+			remoteRef = B87824A019BD1ED900E041FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B87824A319BD1ED900E041FB /* Specs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Specs;
+			remoteRef = B87824A219BD1ED900E041FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EE519BD0074009BB456 /* Cedar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Cedar.framework;
+			remoteRef = B8DB1EE419BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EE719BD0074009BB456 /* Specs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Specs;
+			remoteRef = B8DB1EE619BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EE919BD0074009BB456 /* FocusedSpecs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = FocusedSpecs;
+			remoteRef = B8DB1EE819BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EEB19BD0074009BB456 /* libCedar-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCedar-StaticLib.a";
+			remoteRef = B8DB1EEA19BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EED19BD0074009BB456 /* iOSSpecs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSSpecs.app;
+			remoteRef = B8DB1EEC19BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EEF19BD0074009BB456 /* iOSFrameworkSpecs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = iOSFrameworkSpecs.app;
+			remoteRef = B8DB1EEE19BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EF119BD0074009BB456 /* OCUnitApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OCUnitApp.app;
+			remoteRef = B8DB1EF019BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EF319BD0074009BB456 /* OCUnitAppTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OCUnitAppTests.octest;
+			remoteRef = B8DB1EF219BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EF519BD0074009BB456 /* XCUnitAppTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCUnitAppTests.xctest;
+			remoteRef = B8DB1EF419BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8DB1EF719BD0074009BB456 /* OCUnitAppLogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OCUnitAppLogicTests.octest;
+			remoteRef = B8DB1EF619BD0074009BB456 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B878246E19BD1B5C00E041FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B878247F19BD1B5C00E041FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B878246F19BD1B5C00E041FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B85EDE9619BCFDC9001B6AF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */,
+				B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */,
+				B85EDEA519BCFDC9001B6AF6 /* PDNetworking.m in Sources */,
+				B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */,
+				B878249619BD1DF100E041FB /* PDURLSessionClient.m in Sources */,
+				B846BA1C19BEC17200BF47F4 /* PDJSONClient.m in Sources */,
+				B846BA1719BEB54400BF47F4 /* PDHTTPClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B878246C19BD1B5C00E041FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm in Sources */,
+				B846BA1919BEBEF000BF47F4 /* PDJSONClientSpec.mm in Sources */,
+				B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */,
+				B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */,
+				B846BA1419BEB51900BF47F4 /* PDHTTPClientSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B846BA1119BEAD2100BF47F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Foundation+PivotalSpecHelper-StaticLib";
+			targetProxy = B846BA1019BEAD2100BF47F4 /* PBXContainerItemProxy */;
+		};
+		B84A8B0D19BE46B700E34377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Deferred;
+			targetProxy = B84A8B0C19BE46B700E34377 /* PBXContainerItemProxy */;
+		};
+		B878249219BD1C8B00E041FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cedar-StaticLib";
+			targetProxy = B878249119BD1C8B00E041FB /* PBXContainerItemProxy */;
+		};
+		B8A40BA619BE4A3200C66E79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B85EDE9919BCFDC9001B6AF6 /* PDNetworking */;
+			targetProxy = B8A40BA519BE4A3200C66E79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B878247D19BD1B5C00E041FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B878247E19BD1B5C00E041FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B85EDEBB19BCFDCA001B6AF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B85EDEBC19BCFDCA001B6AF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B85EDEBE19BCFDCA001B6AF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/PDNetworking.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDNetworking/PDNetworking-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$PROJECT_DIR/Externals/deferred/Deferred/\"";
+			};
+			name = Debug;
+		};
+		B85EDEBF19BCFDCA001B6AF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				DSTROOT = /tmp/PDNetworking.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDNetworking/PDNetworking-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"$PROJECT_DIR/Externals/deferred/Deferred/\"";
+			};
+			name = Release;
+		};
+		B878248719BD1B5D00E041FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BUNDLE_LOADER = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"$PROJECT_DIR/Externals/cedar/Source/Headers/\"/** \"$PROJECT_DIR/Externals/deferred/Deferred/\" \"$PROJECT_DIR/Externals/PivotalCoreKit/Foundation/SpecHelper/\"/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B878248819BD1B5D00E041FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BUNDLE_LOADER = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"$PROJECT_DIR/Externals/cedar/Source/Headers/\"/** \"$PROJECT_DIR/Externals/deferred/Deferred/\" \"$PROJECT_DIR/Externals/PivotalCoreKit/Foundation/SpecHelper/\"/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B85EDE9519BCFDC9001B6AF6 /* Build configuration list for PBXProject "PDNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B85EDEBB19BCFDCA001B6AF6 /* Debug */,
+				B85EDEBC19BCFDCA001B6AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B85EDEBD19BCFDCA001B6AF6 /* Build configuration list for PBXNativeTarget "PDNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B85EDEBE19BCFDCA001B6AF6 /* Debug */,
+				B85EDEBF19BCFDCA001B6AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B878248619BD1B5D00E041FB /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B878248719BD1B5D00E041FB /* Debug */,
+				B878248819BD1B5D00E041FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B85EDE9219BCFDC9001B6AF6 /* Project object */;
+}
