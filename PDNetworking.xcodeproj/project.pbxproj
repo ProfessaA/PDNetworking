@@ -25,7 +25,6 @@
 		B84A8AEB19BE416F00E34377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248919BD1C4800E041FB /* Foundation.framework */; };
 		B84A8B0E19BE46C000E34377 /* libDeferred.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B878249F19BD1ED900E041FB /* libDeferred.a */; };
 		B85EDEA319BCFDC9001B6AF6 /* PDNetworking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */; };
-		B85EDEA519BCFDC9001B6AF6 /* PDNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */; };
 		B878247F19BD1B5C00E041FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B878247D19BD1B5C00E041FB /* InfoPlist.strings */; };
 		B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */; };
 		B878248A19BD1C4800E041FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248919BD1C4800E041FB /* Foundation.framework */; };
@@ -253,7 +252,6 @@
 		B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPDNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85EDEA119BCFDC9001B6AF6 /* PDNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDNetworking-Prefix.pch"; sourceTree = "<group>"; };
 		B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDNetworking.h; sourceTree = "<group>"; };
-		B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDNetworking.m; sourceTree = "<group>"; };
 		B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDURLSessionClientDelegate.h; sourceTree = "<group>"; };
 		B878247119BD1B5C00E041FB /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B878247E19BD1B5C00E041FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 				B846BA3519BF56FC00BF47F4 /* PDNetworkClientProvider.h */,
 				B846BA3619BF56FC00BF47F4 /* PDNetworkClientProvider.m */,
 				B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */,
-				B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */,
 				B846BA2B19BECD4100BF47F4 /* PDNetworkResource.h */,
 				B846BA2D19BEDB2D00BF47F4 /* PDNetworkResourceProvider.h */,
 				B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */,
@@ -699,7 +696,6 @@
 			files = (
 				B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */,
 				B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */,
-				B85EDEA519BCFDC9001B6AF6 /* PDNetworking.m in Sources */,
 				B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */,
 				B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */,
 				B878249619BD1DF100E041FB /* PDURLSessionClient.m in Sources */,
