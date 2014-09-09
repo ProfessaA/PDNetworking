@@ -17,6 +17,8 @@
 		B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */; };
 		B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */; };
 		B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */; };
+		B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA3619BF56FC00BF47F4 /* PDNetworkClientProvider.m */; };
+		B846BA3919BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */; };
 		B84A8AE519BE408F00E34377 /* PDRequester.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B87824A419BD1FE600E041FB /* PDRequester.h */; };
 		B84A8AE619BE409E00E34377 /* PDURLSessionClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B878249419BD1DF100E041FB /* PDURLSessionClient.h */; };
 		B84A8AE719BE40A300E34377 /* PDURLSessionClientDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */; };
@@ -241,6 +243,13 @@
 		B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequestProvider.h; sourceTree = "<group>"; };
 		B846BA2D19BEDB2D00BF47F4 /* PDNetworkResourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNetworkResourceProvider.h; sourceTree = "<group>"; };
 		B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNetworkResourceProvider.m; sourceTree = "<group>"; };
+		B846BA3019BF554200BF47F4 /* PDCreationClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDCreationClient.h; sourceTree = "<group>"; };
+		B846BA3219BF567C00BF47F4 /* PDUpdateClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDUpdateClient.h; sourceTree = "<group>"; };
+		B846BA3319BF56A900BF47F4 /* PDDeletionClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDeletionClient.h; sourceTree = "<group>"; };
+		B846BA3419BF56C900BF47F4 /* PDRetrievalClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRetrievalClient.h; sourceTree = "<group>"; };
+		B846BA3519BF56FC00BF47F4 /* PDNetworkClientProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNetworkClientProvider.h; sourceTree = "<group>"; };
+		B846BA3619BF56FC00BF47F4 /* PDNetworkClientProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNetworkClientProvider.m; sourceTree = "<group>"; };
+		B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDNetworkClientProviderSpec.mm; sourceTree = "<group>"; };
 		B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPDNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85EDEA119BCFDC9001B6AF6 /* PDNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDNetworking-Prefix.pch"; sourceTree = "<group>"; };
 		B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDNetworking.h; sourceTree = "<group>"; };
@@ -332,6 +341,8 @@
 		B85EDE9F19BCFDC9001B6AF6 /* PDNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				B846BA3019BF554200BF47F4 /* PDCreationClient.h */,
+				B846BA3319BF56A900BF47F4 /* PDDeletionClient.h */,
 				B846BA2419BEC6EC00BF47F4 /* PDDeserializer.h */,
 				B846BA2119BEC5A900BF47F4 /* PDDomainObjectClient.h */,
 				B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */,
@@ -341,6 +352,8 @@
 				B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */,
 				B846BA2519BEC7C200BF47F4 /* PDJSONRequestProvider.h */,
 				B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */,
+				B846BA3519BF56FC00BF47F4 /* PDNetworkClientProvider.h */,
+				B846BA3619BF56FC00BF47F4 /* PDNetworkClientProvider.m */,
 				B85EDEA219BCFDC9001B6AF6 /* PDNetworking.h */,
 				B85EDEA419BCFDC9001B6AF6 /* PDNetworking.m */,
 				B846BA2B19BECD4100BF47F4 /* PDNetworkResource.h */,
@@ -349,6 +362,8 @@
 				B87824A419BD1FE600E041FB /* PDRequester.h */,
 				B846BA2A19BECCCA00BF47F4 /* PDRequestParametersSerializer.h */,
 				B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */,
+				B846BA3419BF56C900BF47F4 /* PDRetrievalClient.h */,
+				B846BA3219BF567C00BF47F4 /* PDUpdateClient.h */,
 				B878249419BD1DF100E041FB /* PDURLSessionClient.h */,
 				B878249519BD1DF100E041FB /* PDURLSessionClient.m */,
 				B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */,
@@ -371,6 +386,7 @@
 				B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */,
 				B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */,
 				B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */,
+				B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */,
 				B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */,
 				B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */,
 				B878247B19BD1B5C00E041FB /* Supporting Files */,
@@ -684,6 +700,7 @@
 				B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */,
 				B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */,
 				B85EDEA519BCFDC9001B6AF6 /* PDNetworking.m in Sources */,
+				B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */,
 				B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */,
 				B878249619BD1DF100E041FB /* PDURLSessionClient.m in Sources */,
 				B846BA1C19BEC17200BF47F4 /* PDJSONClient.m in Sources */,
@@ -700,6 +717,7 @@
 				B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */,
 				B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */,
 				B846BA1419BEB51900BF47F4 /* PDHTTPClientSpec.mm in Sources */,
+				B846BA3919BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

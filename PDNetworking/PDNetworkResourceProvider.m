@@ -9,44 +9,12 @@
 @property (nonatomic) id<PDRequestParametersSerializer> requestParametersSerializer;
 @property (nonatomic) id<PDDeserializer> deserializer;
 
-@end
-
-
-@implementation _PDNetworkResource
-@synthesize pathConfigurationBlock = _pathConfigurationBlock;
-@synthesize requestParametersSerializer = _requestParametersSerializer;
-@synthesize deserializer = _deserializer;
-@synthesize HTTPVerb = _HTTPVerb;
+- (instancetype)init __attribute__((unavailable("Please use initWithPathConfigurationBlock:requestParametersSerializer:deserializer:HTTPVerb: when initializing _PDNetworkResource")));
 
 - (instancetype)initWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
                    requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
                                   deserializer:(id<PDDeserializer>)deserializer
-                                      HTTPVerb:(NSString *)HTTPVerb
-{
-    self = [super init];
-    if (self) {
-        self.pathConfigurationBlock = pathConfigurationBlock;
-        self.requestParametersSerializer = requestParametersSerializer;
-        self.deserializer = deserializer;
-        self.HTTPVerb = HTTPVerb;
-    }
-    return self;
-}
-
-#pragma mark - <PDNetworkResource>
-
-- (NSString *)HTTPMethod
-{
-    return self.HTTPVerb;
-}
-
-#pragma mark - NSObject
-
-- (instancetype)init
-{
-    [self doesNotRecognizeSelector:_cmd];
-    return nil;
-}
+                                      HTTPVerb:(NSString *)HTTPVerb;
 
 @end
 
@@ -106,6 +74,45 @@
                                                                                  deserializer:deserializer
                                                                                      HTTPVerb:@"PUT"];
     return resource;
+}
+
+@end
+
+
+@implementation _PDNetworkResource
+@synthesize pathConfigurationBlock = _pathConfigurationBlock;
+@synthesize requestParametersSerializer = _requestParametersSerializer;
+@synthesize deserializer = _deserializer;
+@synthesize HTTPVerb = _HTTPVerb;
+
+- (instancetype)initWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
+                   requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
+                                  deserializer:(id<PDDeserializer>)deserializer
+                                      HTTPVerb:(NSString *)HTTPVerb
+{
+    self = [super init];
+    if (self) {
+        self.pathConfigurationBlock = pathConfigurationBlock;
+        self.requestParametersSerializer = requestParametersSerializer;
+        self.deserializer = deserializer;
+        self.HTTPVerb = HTTPVerb;
+    }
+    return self;
+}
+
+#pragma mark - <PDNetworkResource>
+
+- (NSString *)HTTPMethod
+{
+    return self.HTTPVerb;
+}
+
+#pragma mark - NSObject
+
+- (instancetype)init
+{
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
 }
 
 @end
