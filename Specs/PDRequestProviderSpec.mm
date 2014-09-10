@@ -18,7 +18,7 @@ describe(@"PDJSONRequestProvider", ^{
     });
     
     it(@"should provide a request given an http method and a path", ^{
-        NSURLRequest *request = [subject requestWithHTTPMethod:@"GET" path:@"cars"];
+        NSURLRequest *request = [subject requestWithHTTPMethod:@"GET" path:@"cars" parameters:nil];
         request.HTTPMethod should equal(@"GET");
         [request.URL absoluteString] should equal(@"https://example.com/api/v1/cars");
     });

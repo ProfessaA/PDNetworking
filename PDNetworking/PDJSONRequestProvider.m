@@ -19,13 +19,14 @@
     return self;
 }
 
-- (NSURLRequest *)requestWithHTTPMethod:(NSString *)httpMethod
+- (NSURLRequest *)requestWithHTTPMethod:(NSString *)HTTPMethod
                                    path:(NSString *)path
+                             parameters:(NSDictionary *)parameters
 {
     NSURL *baseURL = [self.URLComponents URL];
     NSURL *URL = [baseURL URLByAppendingPathComponent:path];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-    request.HTTPMethod = httpMethod;
+    request.HTTPMethod = HTTPMethod;
     return request;
 }
 

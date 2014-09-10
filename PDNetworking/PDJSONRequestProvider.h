@@ -1,13 +1,14 @@
-#import <Foundation/Foundation.h>
+#import "PDRequestProvider.h"
 
 
-@interface PDJSONRequestProvider : NSObject
+@interface PDJSONRequestProvider : NSObject <PDRequestProvider>
 
 - (instancetype)init __attribute__((unavailable("Please use initWithURLComponents: when initializing PDRequestProvider")));
 
 - (instancetype)initWithURLComponents:(NSURLComponents *)URLComponents;
 
-- (NSURLRequest *)requestWithHTTPMethod:(NSString *)httpMethod
-                                   path:(NSString *)path;
+- (NSURLRequest *)requestWithHTTPMethod:(NSString *)HTTPMethod
+                                   path:(NSString *)path
+                             parameters:(NSDictionary *)parameters;
 
 @end
