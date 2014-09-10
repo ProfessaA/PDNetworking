@@ -17,7 +17,6 @@
 
 @property (nonatomic) id <PDNetworkResource> networkResource;
 @property (nonatomic) PDDomainObjectClient *domainObjectClient;
-@property (nonatomic) id <PDRequestProvider> requestProvider;
 
 @end
 
@@ -54,7 +53,6 @@
 
 - (id)networkClientWithNetworkResource:(id<PDNetworkResource>)networkResource
                     domainObjectClient:(PDDomainObjectClient *)domainObjectClient
-                       requestProvider:(id<PDRequestProvider>)requestProvider
 {
     _PDBaseClient *client;
     NSString *HTTPMethod = networkResource.HTTPMethod;
@@ -72,7 +70,6 @@
     }
     client.networkResource = networkResource;
     client.domainObjectClient = domainObjectClient;
-    client.requestProvider = requestProvider;
     return client;
 }
 
@@ -83,13 +80,11 @@
 
 - (instancetype)initWithNetworkResource:(id<PDNetworkResource>)networkResource
                      domainObjectClient:(PDDomainObjectClient *)domainObjectClient
-                        requestProvider:(id<PDRequestProvider>)requestProvider
 {
     self = [super init];
     if (self) {
         self.networkResource = networkResource;
         self.domainObjectClient = domainObjectClient;
-        self.requestProvider = requestProvider;
     }
     return self;
 }
@@ -103,7 +98,9 @@
 
 - (KSPromise *)creationPromiseWithRequestParameters:(id)requestParameters
 {
-    return [self.domainObjectClient promiseWithNetworkResource:self.networkResource requestParameters:requestParameters];
+    id <PDNetworkResource> networkResource = self.networkResource;
+    return [self.domainObjectClient promiseWithNetworkResource:networkResource
+                                             requestParameters:requestParameters];
 }
 
 @end
@@ -115,7 +112,9 @@
 
 - (KSPromise *)retrievalClientPromiseWithRequestParameters:(id)requestParameters
 {
-    return [self.domainObjectClient promiseWithNetworkResource:self.networkResource requestParameters:requestParameters];
+    id <PDNetworkResource> networkResource = self.networkResource;
+    return [self.domainObjectClient promiseWithNetworkResource:networkResource
+                                             requestParameters:requestParameters];
 }
 
 @end
@@ -127,7 +126,9 @@
 
 - (KSPromise *)deletionPromiseWithRequestParameters:(id)requestParameters
 {
-    return [self.domainObjectClient promiseWithNetworkResource:self.networkResource requestParameters:requestParameters];
+    id <PDNetworkResource> networkResource = self.networkResource;
+    return [self.domainObjectClient promiseWithNetworkResource:networkResource
+                                             requestParameters:requestParameters];
 }
 
 @end
@@ -139,7 +140,9 @@
 
 - (KSPromise *)updatePromiseWithRequestParameters:(id)requestParameters
 {
-    return [self.domainObjectClient promiseWithNetworkResource:self.networkResource requestParameters:requestParameters];
+    id <PDNetworkResource> networkResource = self.networkResource;
+    return [self.domainObjectClient promiseWithNetworkResource:networkResource
+                                             requestParameters:requestParameters];
 }
 
 @end

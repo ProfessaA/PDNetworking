@@ -21,7 +21,6 @@ SPEC_BEGIN(PDNetworkClientProviderSpec)
 describe(@"PDNetworkClientProvider", ^{
     __block PDNetworkClientProvider *subject;
     __block id<PDNetworkResource> networkResource;
-    __block id<PDRequestProvider> requestProvider;
     __block PDDomainObjectClient *domainObjectClient;
     __block id<PDRequestParametersSerializer> requestParametersSerializer;
     __block id<PDDeserializer> deserializer;
@@ -42,8 +41,7 @@ describe(@"PDNetworkClientProvider", ^{
             beforeEach(^{
                 networkResource stub_method(@selector(HTTPMethod)).and_return(HTTPMethod);
                 client = [subject networkClientWithNetworkResource:networkResource
-                                                domainObjectClient:domainObjectClient
-                                                   requestProvider:requestProvider];
+                                                domainObjectClient:domainObjectClient];
             });
             
             it(@"should conform to the correct protocol", ^{

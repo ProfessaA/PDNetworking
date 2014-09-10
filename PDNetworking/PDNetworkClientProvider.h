@@ -3,7 +3,6 @@
 
 @class PDDomainObjectClient;
 @protocol PDRequester;
-@protocol PDRequestProvider;
 @protocol PDNetworkResource;
 @protocol PDCreationClient;
 @protocol PDUpdateClient;
@@ -15,7 +14,6 @@
 @interface PDNetworkClientProvider : NSObject
 
 - (id)networkClientWithNetworkResource:(id<PDNetworkResource>)networkResource
-                    domainObjectClient:(PDDomainObjectClient *)domainObjectClient
-                       requestProvider:(id<PDRequestProvider>)requestProvider;
+                    domainObjectClient:(PDDomainObjectClient *)domainObjectClient;
 
 @end
