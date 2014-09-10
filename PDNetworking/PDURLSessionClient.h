@@ -9,8 +9,9 @@
 
 @property (weak, nonatomic) id <PDURLSessionClientDelegate> delegate;
 
-- (instancetype)init __attribute__((unavailable("Please use initWithURLSession: when initializing PDURLSessionClient")));
+- (instancetype)init __attribute__((unavailable("Please use initWithURLSession:queue: when initializing PDURLSessionClient")));
 
-- (instancetype)initWithURLSession:(NSURLSession *)URLSession;
+- (instancetype)initWithURLSession:(NSURLSession *)URLSession
+                             queue:(NSOperationQueue *)queue;
 
 @end

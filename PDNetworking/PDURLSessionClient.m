@@ -7,6 +7,7 @@
 @interface PDURLSessionClient ()
 
 @property (nonatomic) NSURLSession *URLSession;
+@property (nonatomic) NSOperationQueue *queue;
 
 @end
 
@@ -14,10 +15,12 @@
 @implementation PDURLSessionClient
 
 - (instancetype)initWithURLSession:(NSURLSession *)URLSession
+                             queue:(NSOperationQueue *)queue
 {
     self = [super init];
     if (self) {
         self.URLSession = URLSession;
+        self.queue = queue;
     }
     return self;
 }
@@ -34,7 +37,10 @@
                                           __strong typeof(weakSelf) strongSelf = weakSelf;
                                           
                                           [strongSelf.URLSession getTasksWithCompletionHandler:^(NSArray *dataTasks, NSArray *uploadTasks, NSArray *downloadTasks) {
-                                              [strongSelf.delegate URLSessionClient:strongSelf didUpdateDataTasks:dataTasks uploadTasks:uploadTasks downloadTasks:downloadTasks];
+                                              [strongSelf.queue addOperationWithBlock:^{
+                                                  [strongSelf.delegate URLSessionClient:strongSelf didUpdateDataTasks:dataTasks uploadTasks:uploadTasks downloadTasks:downloadTasks];
+                                              }];
+
                                           }];
                                           
                                           if (error) {
@@ -46,7 +52,10 @@
                                           }
                                       }];
     [dataTask resume];
-    [self.delegate URLSessionClient:self didSendRequest:request];
+    [self.queue addOperationWithBlock:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.delegate URLSessionClient:strongSelf didSendRequest:request];
+    }];
     return deferred.promise;
 }
 

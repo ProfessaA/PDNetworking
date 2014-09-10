@@ -4,6 +4,7 @@
 #import "PSHKFakeOperationQueue.h"
 #import "PDURLSessionClientDelegate.h"
 #import "KSNetworkClient.h"
+#import "PSHKFakeOperationQueue.h"
 
 
 using namespace Cedar::Matchers;
@@ -15,12 +16,15 @@ SPEC_BEGIN(PDURLSessionClientSpec)
 describe(@"PDURLSessionClient", ^{
     __block PDURLSessionClient *subject;
     __block NSURLSession<CedarDouble> *session;
+    __block PSHKFakeOperationQueue *queue;
     __block id<PDURLSessionClientDelegate> delegate;
     
     beforeEach(^{
+        queue = [[PSHKFakeOperationQueue alloc] init];
+        [queue setRunSynchronously:YES];
         delegate = nice_fake_for(@protocol(PDURLSessionClientDelegate));
         session = nice_fake_for([NSURLSession class]);
-        subject = [[PDURLSessionClient alloc] initWithURLSession:session];
+        subject = [[PDURLSessionClient alloc] initWithURLSession:session queue:queue];
         subject.delegate = delegate;
     });
     
