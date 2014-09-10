@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82CCCC319C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CCCC219C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m */; };
 		B846BA1219BEAD2C00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B846BA0919BEAD0D00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a */; };
 		B846BA1419BEB51900BF47F4 /* PDHTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */; };
 		B846BA1719BEB54400BF47F4 /* PDHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */; };
@@ -215,6 +216,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B82CCCC119C00EEF005AAC92 /* PDParameterToQueryStringEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDParameterToQueryStringEncoder.h; sourceTree = "<group>"; };
+		B82CCCC219C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDParameterToQueryStringEncoder.m; sourceTree = "<group>"; };
 		B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Foundation.xcodeproj; path = PivotalCoreKit/Foundation/Foundation.xcodeproj; sourceTree = "<group>"; };
 		B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDHTTPClientSpec.mm; sourceTree = "<group>"; };
 		B846BA1519BEB54400BF47F4 /* PDHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDHTTPClient.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				B846BA2B19BECD4100BF47F4 /* PDNetworkResource.h */,
 				B846BA2D19BEDB2D00BF47F4 /* PDNetworkResourceProvider.h */,
 				B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */,
+				B82CCCC119C00EEF005AAC92 /* PDParameterToQueryStringEncoder.h */,
+				B82CCCC219C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m */,
 				B87824A419BD1FE600E041FB /* PDRequester.h */,
 				B846BA2A19BECCCA00BF47F4 /* PDRequestParametersSerializer.h */,
 				B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */,
@@ -687,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */,
+				B82CCCC319C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m in Sources */,
 				B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */,
 				B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */,
 				B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */,
