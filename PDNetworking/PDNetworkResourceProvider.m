@@ -21,20 +21,9 @@
 
 @implementation PDNetworkResourceProvider
 
-- (id<PDNetworkResource>)detailResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
-                                      requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
-                                                     deserializer:(id<PDDeserializer>)deserializer
-{
-    _PDNetworkResource *resource = [[_PDNetworkResource alloc] initWithPathConfigurationBlock:pathConfigurationBlock
-                                                                  requestParametersSerializer:requestParametersSerializer
-                                                                                 deserializer:deserializer
-                                                                                     HTTPVerb:@"GET"];
-    return resource;
-}
-
-- (id<PDNetworkResource>)collectionResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
-                                          requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
-                                                         deserializer:(id<PDDeserializer>)deserializer
+- (id<PDNetworkResource>)retrievalResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
+                                         requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
+                                                        deserializer:(id<PDDeserializer>)deserializer;
 {
     _PDNetworkResource *resource = [[_PDNetworkResource alloc] initWithPathConfigurationBlock:pathConfigurationBlock
                                                                   requestParametersSerializer:requestParametersSerializer
@@ -54,6 +43,17 @@
     return resource;
 }
 
+- (id<PDNetworkResource>)updateResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
+                                      requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
+                                                     deserializer:(id<PDDeserializer>)deserializer
+{
+    _PDNetworkResource *resource = [[_PDNetworkResource alloc] initWithPathConfigurationBlock:pathConfigurationBlock
+                                                                  requestParametersSerializer:requestParametersSerializer
+                                                                                 deserializer:deserializer
+                                                                                     HTTPVerb:@"PUT"];
+    return resource;
+}
+
 - (id<PDNetworkResource>)deletionResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
                                         requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
                                                        deserializer:(id<PDDeserializer>)deserializer
@@ -62,17 +62,6 @@
                                                                   requestParametersSerializer:requestParametersSerializer
                                                                                  deserializer:deserializer
                                                                                      HTTPVerb:@"DELETE"];
-    return resource;
-}
-
-- (id<PDNetworkResource>)updateResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
-                                        requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
-                                                       deserializer:(id<PDDeserializer>)deserializer
-{
-    _PDNetworkResource *resource = [[_PDNetworkResource alloc] initWithPathConfigurationBlock:pathConfigurationBlock
-                                                                  requestParametersSerializer:requestParametersSerializer
-                                                                                 deserializer:deserializer
-                                                                                     HTTPVerb:@"PUT"];
     return resource;
 }
 
