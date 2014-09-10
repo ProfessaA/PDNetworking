@@ -9,7 +9,7 @@
 
 @interface PDDomainObjectClient : NSObject
 
-- (instancetype)init __attribute__((unavailable("Please use initWithRequester:requestProvider: when initializing PDDomainObjectClient")));
+- (instancetype)init __attribute__((unavailable("Please use initWithRequester:requestProvider:queue: when initializing PDDomainObjectClient")));
 
 - (instancetype)initWithRequester:(id<PDRequester>)requester
                   requestProvider:(id<PDRequestProvider>)requestProvider
