@@ -204,13 +204,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B85EDE9819BCFDC9001B6AF6 /* CopyFiles */ = {
+		B85EDE9819BCFDC9001B6AF6 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -278,9 +279,9 @@
 				B878248A19BD1C4800E041FB /* Foundation.framework in Frameworks */,
 				B878248E19BD1C6400E041FB /* UIKit.framework in Frameworks */,
 				B878249319BD1CB900E041FB /* libCedar-StaticLib.a in Frameworks */,
+				B846BA1219BEAD2C00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a in Frameworks */,
 				B84A8B0E19BE46C000E34377 /* libDeferred.a in Frameworks */,
 				B8A40BA719BE4A3700C66E79 /* libPDNetworking.a in Frameworks */,
-				B846BA1219BEAD2C00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +443,7 @@
 			buildPhases = (
 				B85EDE9619BCFDC9001B6AF6 /* Sources */,
 				B85EDE9719BCFDC9001B6AF6 /* Frameworks */,
-				B85EDE9819BCFDC9001B6AF6 /* CopyFiles */,
+				B85EDE9819BCFDC9001B6AF6 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -465,10 +466,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				B8A40BA619BE4A3200C66E79 /* PBXTargetDependency */,
 				B878249219BD1C8B00E041FB /* PBXTargetDependency */,
 				B846BA1119BEAD2100BF47F4 /* PBXTargetDependency */,
 				B84A8B0D19BE46B700E34377 /* PBXTargetDependency */,
+				B8A40BA619BE4A3200C66E79 /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = Tests;
