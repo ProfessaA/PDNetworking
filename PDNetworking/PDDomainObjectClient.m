@@ -48,16 +48,23 @@
         [promise then:^id(id foundationCollection) {
             if (foundationCollection) {
                 id <PDDeserializer> deserializer = networkResource.deserializer;
-                NSError *deserializationError;
-                id domainObject = [deserializer deserialize:foundationCollection error:&deserializationError];
-                if (!deserializationError) {
-                    [self.queue addOperationWithBlock:^{
-                        [deferred resolveWithValue:domainObject];
-                    }];
+                if (deserializer) {
+                    NSError *deserializationError;
+                    id domainObject = [deserializer deserialize:foundationCollection error:&deserializationError];
+                    if (!deserializationError) {
+                        [self.queue addOperationWithBlock:^{
+                            [deferred resolveWithValue:domainObject];
+                        }];
+                    }
+                    else {
+                        [self.queue addOperationWithBlock:^{
+                            [deferred rejectWithError:deserializationError];
+                        }];
+                    }
                 }
                 else {
                     [self.queue addOperationWithBlock:^{
-                        [deferred rejectWithError:deserializationError];
+                        [deferred resolveWithValue:foundationCollection];
                     }];
                 }
             }
