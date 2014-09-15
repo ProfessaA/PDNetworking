@@ -58,16 +58,16 @@ describe(@"PDGenericDomainObjectClient", ^{
                                                                        deserializer:deserializer];
             
             requestParametersSerializer stub_method(@selector(serialize:error:))
-            .with(requestParameters, Arguments::anything)
-            .and_return(@{@"request": @"params"});
+                .with(requestParameters, Arguments::anything)
+                .and_return(@{@"request": @"params"});
             
             requestProvider stub_method(@selector(requestWithHTTPMethod:path:parameters:))
-            .with(@"GET", @"asdf.json", @{@"request": @"params"})
-            .and_return(request);
+                .with(@"GET", @"asdf.json", @{@"request": @"params"})
+                .and_return(request);
             
             requester stub_method(@selector(promiseWithRequest:))
-            .with(request)
-            .and_return(deferred.promise);
+                .with(request)
+                .and_return(deferred.promise);
             promise = [subject promiseWithNetworkResource:networkResource requestParameters:requestParameters];
         });
         
