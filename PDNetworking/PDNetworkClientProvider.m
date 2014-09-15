@@ -22,30 +22,18 @@
 
 
 @interface _PDCreationClient : _PDBaseClient <PDCreationClient>
-
-- (KSPromise *)creationPromiseWithRequestParameters:(id)requestParameters;
-
 @end
 
 
-@interface _PDRetreivalClient : _PDBaseClient <PDRetrievalClient>
-
-- (KSPromise *)retrievalClientPromiseWithRequestParameters:(id)requestParameters;
-
+@interface _PDRetrievalClient : _PDBaseClient <PDRetrievalClient>
 @end
 
 
 @interface _PDDeletionClient : _PDBaseClient <PDDeletionClient>
-
-- (KSPromise *)deletionPromiseWithRequestParameters:(id)requestParameters;
-
 @end
 
 
 @interface _PDUpdateClient : _PDBaseClient <PDUpdateClient>
-
-- (KSPromise *)updatePromiseWithRequestParameters:(id)requestParameters;
-
 @end
 
 
@@ -57,7 +45,7 @@
     _PDBaseClient *client;
     NSString *HTTPMethod = networkResource.HTTPMethod;
     if ([HTTPMethod isEqualToString:@"GET"]) {
-        client = [[_PDRetreivalClient alloc] init];
+        client = [[_PDRetrievalClient alloc] init];
     }
     else if ([HTTPMethod isEqualToString:@"POST"]) {
         client = [[_PDCreationClient alloc] init];
@@ -106,11 +94,11 @@
 @end
 
 
-@implementation _PDRetreivalClient
+@implementation _PDRetrievalClient
 
-#pragma mark - <PDRetreivalClient>
+#pragma mark - <PDRetrievalClient>
 
-- (KSPromise *)retrievalClientPromiseWithRequestParameters:(id)requestParameters
+- (KSPromise *)retrievalPromiseWithRequestParameters:(id)requestParameters
 {
     id <PDNetworkResource> networkResource = self.networkResource;
     return [self.domainObjectClient promiseWithNetworkResource:networkResource

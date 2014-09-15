@@ -48,7 +48,7 @@ describe(@"PDNetworkClientProvider", ^{
                 [client conformsToProtocol:protocol] should be_truthy;
             });
             
-            describe(@"as a creation client", ^{
+            describe([NSString stringWithFormat:@"as a %@ client", HTTPMethod], ^{
                 __block KSDeferred *deferred;
                 __block KSPromise *promise;
                 __block id requestParameters;
@@ -84,7 +84,7 @@ describe(@"PDNetworkClientProvider", ^{
     
     itShouldReturnAtNetworkClient(@"GET",
                                   @protocol(PDRetrievalClient),
-                                  @selector(retrievalClientPromiseWithRequestParameters:));
+                                  @selector(retrievalPromiseWithRequestParameters:));
     
     itShouldReturnAtNetworkClient(@"POST",
                                   @protocol(PDCreationClient),

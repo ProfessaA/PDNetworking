@@ -3,6 +3,6 @@
 
 @protocol PDRetrievalClient <NSObject>
 
-- (KSPromise *)retrievalClientPromiseWithRequestParameters:(id)requestParameters;
+- (KSPromise *)retrievalPromiseWithRequestParameters:(id)requestParameters;
 
 @end
