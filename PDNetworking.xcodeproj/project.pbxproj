@@ -30,6 +30,8 @@
 		B878249619BD1DF100E041FB /* PDURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B878249519BD1DF100E041FB /* PDURLSessionClient.m */; };
 		B8A40BA719BE4A3700C66E79 /* libPDNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B85EDE9A19BCFDC9001B6AF6 /* libPDNetworking.a */; };
 		B8A40BAB19BE8AE100C66E79 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B878248F19BD1C7600E041FB /* SenTestingKit.framework */; };
+		B8E879E019C77F9E00004473 /* PDGenericDomainObjectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E879DF19C77F9E00004473 /* PDGenericDomainObjectClient.m */; };
+		B8E879F519C7805800004473 /* PDGenericDomainObjectClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8E879F419C7805800004473 /* PDGenericDomainObjectClientSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,6 +263,9 @@
 		B878249719BD1ED900E041FB /* Deferred.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Deferred.xcodeproj; path = deferred/Deferred.xcodeproj; sourceTree = "<group>"; };
 		B87824A419BD1FE600E041FB /* PDRequester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequester.h; sourceTree = "<group>"; };
 		B8DB1ED619BD0073009BB456 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
+		B8E879DE19C77F9E00004473 /* PDGenericDomainObjectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDGenericDomainObjectClient.h; sourceTree = "<group>"; };
+		B8E879DF19C77F9E00004473 /* PDGenericDomainObjectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDGenericDomainObjectClient.m; sourceTree = "<group>"; };
+		B8E879F419C7805800004473 /* PDGenericDomainObjectClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDGenericDomainObjectClientSpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +370,8 @@
 				B878249519BD1DF100E041FB /* PDURLSessionClient.m */,
 				B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */,
 				B85EDEA019BCFDC9001B6AF6 /* Supporting Files */,
+				B8E879DE19C77F9E00004473 /* PDGenericDomainObjectClient.h */,
+				B8E879DF19C77F9E00004473 /* PDGenericDomainObjectClient.m */,
 			);
 			path = PDNetworking;
 			sourceTree = "<group>";
@@ -387,6 +394,7 @@
 				B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */,
 				B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */,
 				B878247B19BD1B5C00E041FB /* Supporting Files */,
+				B8E879F419C7805800004473 /* PDGenericDomainObjectClientSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -696,6 +704,7 @@
 			files = (
 				B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */,
 				B82CCCC319C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m in Sources */,
+				B8E879E019C77F9E00004473 /* PDGenericDomainObjectClient.m in Sources */,
 				B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */,
 				B824AA3A19C72D8A0072D517 /* PDDomainObjectClientProvider.m in Sources */,
 				B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */,
@@ -709,6 +718,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E879F519C7805800004473 /* PDGenericDomainObjectClientSpec.mm in Sources */,
 				B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm in Sources */,
 				B846BA1919BEBEF000BF47F4 /* PDJSONClientSpec.mm in Sources */,
 				B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */,

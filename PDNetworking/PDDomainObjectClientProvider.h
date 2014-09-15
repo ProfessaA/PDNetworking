@@ -13,7 +13,6 @@
                                    acceptableHTTPStatusCodes:(NSIndexSet *)acceptableHTTPStatusCodes
                                              requestProvider:(id<PDRequestProvider>)requestProvider
                                              httpErrorDomain:(NSString *)httpErrorDomain
-                                             jsonErrorDomain:(NSString *)jsonErrorDomain
                                                        queue:(NSOperationQueue *)queue;
 
 @end
