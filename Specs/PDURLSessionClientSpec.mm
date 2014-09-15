@@ -1,10 +1,22 @@
 #import "CDRSpecHelper.h"
 #import "PDURLSessionClient.h"
+#import "PDURLSessionClientDelegate.h"
 #import "KSPromise.h"
 #import "PSHKFakeOperationQueue.h"
-#import "PDURLSessionClientDelegate.h"
 #import "KSNetworkClient.h"
 #import "PSHKFakeOperationQueue.h"
+
+
+@interface FakeSessionClientDelegate : NSObject <PDURLSessionClientDelegate>
+
+
+@property (nonatomic) PDURLSessionClient *client;
+@property (nonatomic) NSURLRequest *request;
+@property (nonatomic) NSArray *dataTasks;
+@property (nonatomic) NSArray *uploadTasks;
+@property (nonatomic) NSArray *downloadTasks;
+
+@end
 
 
 using namespace Cedar::Matchers;
@@ -17,12 +29,12 @@ describe(@"PDURLSessionClient", ^{
     __block PDURLSessionClient *subject;
     __block NSURLSession<CedarDouble> *session;
     __block PSHKFakeOperationQueue *queue;
-    __block id<PDURLSessionClientDelegate> delegate;
+    __block FakeSessionClientDelegate *delegate;
     
     beforeEach(^{
         queue = [[PSHKFakeOperationQueue alloc] init];
         [queue setRunSynchronously:YES];
-        delegate = nice_fake_for(@protocol(PDURLSessionClientDelegate));
+        delegate = [[FakeSessionClientDelegate alloc] init];
         session = nice_fake_for([NSURLSession class]);
         subject = [[PDURLSessionClient alloc] initWithURLSession:session queue:queue];
         subject.delegate = delegate;
@@ -77,7 +89,8 @@ describe(@"PDURLSessionClient", ^{
         });
         
         it(@"should notify the session client's delegate", ^{
-            delegate should have_received(@selector(URLSessionClient:didSendRequest:)).with(subject, request);
+            delegate.client should equal(subject);
+            delegate.request should equal(request);
         });
         
         context(@"when the request succeeds", ^{
@@ -105,7 +118,10 @@ describe(@"PDURLSessionClient", ^{
                 });
                 
                 it(@"should notify its delegate", ^{
-                    delegate should have_received(@selector(URLSessionClient:didUpdateDataTasks:uploadTasks:downloadTasks:)).with(subject, @[@0], @[@0, @1], @[@0, @1, @2]);
+                    delegate.client should equal(subject);
+                    delegate.dataTasks should equal(@[@0]);
+                    delegate.uploadTasks should equal(@[@0, @1]);
+                    delegate.downloadTasks should equal(@[@0, @1, @2]);
                 });
             });
         });
@@ -126,3 +142,25 @@ describe(@"PDURLSessionClient", ^{
 
 SPEC_END
 
+
+@implementation FakeSessionClientDelegate
+
+- (void)URLSessionClient:(PDURLSessionClient *)client
+          didSendRequest:(NSURLRequest *)request
+{
+    self.client = client;
+    self.request = request;
+}
+
+- (void)URLSessionClient:(PDURLSessionClient *)client
+      didUpdateDataTasks:(NSArray *)dataTasks
+             uploadTasks:(NSArray *)uploadTasks
+           downloadTasks:(NSArray *)downloadTasks
+{
+    self.client = client;
+    self.dataTasks = dataTasks;
+    self.uploadTasks = uploadTasks;
+    self.downloadTasks = downloadTasks;
+}
+
+@end

@@ -1,23 +1,58 @@
-#import "PDDomainObjectClient.h"
+#import "PDDomainObjectClientProvider.h"
 #import "PDRequester.h"
 #import "PDRequestProvider.h"
-#import "KSPromise.h"
-#import "PDDeserializer.h"
-#import "PDRequestParametersSerializer.h"
 #import "PDNetworkResource.h"
 #import "KSDeferred.h"
+#import "PDDeserializer.h"
+#import "PDURLSessionClient.h"
+#import "PDHTTPClient.h"
+#import "PDJSONClient.h"
+#import "PDDomainObjectClient.h"
+#import "PDRequestParametersSerializer.h"
 
 
-@interface PDDomainObjectClient ()
+@interface _PDDomainObjectClient : NSObject <PDDomainObjectClient>
 
 @property (nonatomic) id<PDRequester> requester;
 @property (nonatomic) id<PDRequestProvider> requestProvider;
 @property (nonatomic) NSOperationQueue *queue;
 
+- (instancetype)init __attribute__((unavailable("Please use initWithRequester:requestProvider:queue: when initializing PDDomainObjectClient")));
+
+- (instancetype)initWithRequester:(id<PDRequester>)requester
+                  requestProvider:(id<PDRequestProvider>)requestProvider
+                            queue:(NSOperationQueue *)queue;
+
 @end
 
 
-@implementation PDDomainObjectClient
+
+@implementation PDDomainObjectClientProvider
+
+- (id<PDDomainObjectClient>)domainObjectClientWithURLSession:(NSURLSession *)urlSession
+                                    urlSessionClientDelegate:(id<PDURLSessionClientDelegate>)urlSessionClientDelegate
+                                   acceptableHTTPStatusCodes:(NSIndexSet *)acceptableHTTPStatusCodes
+                                             requestProvider:(id<PDRequestProvider>)requestProvider
+                                             httpErrorDomain:(NSString *)httpErrorDomain
+                                             jsonErrorDomain:(NSString *)jsonErrorDomain
+                                                       queue:(NSOperationQueue *)queue
+{
+    PDURLSessionClient *urlSessionClient = [[PDURLSessionClient alloc] initWithURLSession:urlSession queue:queue];
+    urlSessionClient.delegate = urlSessionClientDelegate;
+    id<PDRequester> httpClient = [[PDHTTPClient alloc] initWithRequester:urlSessionClient
+                                                   acceptableStatusCodes:acceptableHTTPStatusCodes
+                                                             errorDomain:httpErrorDomain];
+    id<PDRequester> jsonClient = [[PDJSONClient alloc] initWithRequester:httpClient];
+    id<PDDomainObjectClient> domainObjectClient = [[_PDDomainObjectClient alloc] initWithRequester:jsonClient
+                                                                                   requestProvider:requestProvider
+                                                                                             queue:queue];
+    return domainObjectClient;
+}
+
+@end
+
+
+@implementation _PDDomainObjectClient
 
 - (instancetype)initWithRequester:(id<PDRequester>)requester
                   requestProvider:(id<PDRequestProvider>)requestProvider
@@ -37,7 +72,7 @@
 {
     KSDeferred *deferred = [KSDeferred defer];
     id <PDRequestParametersSerializer> serializer = networkResource.requestParametersSerializer;
-
+    
     NSError *serializationError;
     NSDictionary *parameters = [serializer serialize:requestParameters error:&serializationError];
     if (!serializationError) {

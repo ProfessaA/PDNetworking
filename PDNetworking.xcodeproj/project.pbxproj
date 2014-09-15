@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B824AA3A19C72D8A0072D517 /* PDDomainObjectClientProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B824AA3919C72D8A0072D517 /* PDDomainObjectClientProvider.m */; };
 		B82CCCC319C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B82CCCC219C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m */; };
 		B846BA1219BEAD2C00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B846BA0919BEAD0D00BF47F4 /* libFoundation+PivotalSpecHelper-StaticLib.a */; };
 		B846BA1419BEB51900BF47F4 /* PDHTTPClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */; };
 		B846BA1719BEB54400BF47F4 /* PDHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */; };
 		B846BA1919BEBEF000BF47F4 /* PDJSONClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */; };
 		B846BA1C19BEC17200BF47F4 /* PDJSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */; };
-		B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */; };
-		B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */; };
+		B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm */; };
 		B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */; };
 		B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */; };
 		B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */; };
@@ -217,6 +217,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B824AA3719C72D440072D517 /* PDDomainObjectClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDomainObjectClient.h; sourceTree = "<group>"; };
+		B824AA3819C72D8A0072D517 /* PDDomainObjectClientProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDomainObjectClientProvider.h; sourceTree = "<group>"; };
+		B824AA3919C72D8A0072D517 /* PDDomainObjectClientProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDomainObjectClientProvider.m; sourceTree = "<group>"; };
 		B82CCCC119C00EEF005AAC92 /* PDParameterToQueryStringEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDParameterToQueryStringEncoder.h; sourceTree = "<group>"; };
 		B82CCCC219C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDParameterToQueryStringEncoder.m; sourceTree = "<group>"; };
 		B846B9E919BEAD0D00BF47F4 /* Foundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Foundation.xcodeproj; path = PivotalCoreKit/Foundation/Foundation.xcodeproj; sourceTree = "<group>"; };
@@ -226,9 +229,7 @@
 		B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDJSONClientSpec.mm; sourceTree = "<group>"; };
 		B846BA1A19BEC17200BF47F4 /* PDJSONClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJSONClient.h; sourceTree = "<group>"; };
 		B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJSONClient.m; sourceTree = "<group>"; };
-		B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDDomainObjectClientSpec.mm; sourceTree = "<group>"; };
-		B846BA2119BEC5A900BF47F4 /* PDDomainObjectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDomainObjectClient.h; sourceTree = "<group>"; };
-		B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDomainObjectClient.m; sourceTree = "<group>"; };
+		B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDDomainObjectClientProviderSpec.mm; sourceTree = "<group>"; };
 		B846BA2419BEC6EC00BF47F4 /* PDDeserializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDeserializer.h; sourceTree = "<group>"; };
 		B846BA2519BEC7C200BF47F4 /* PDJSONRequestProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJSONRequestProvider.h; sourceTree = "<group>"; };
 		B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJSONRequestProvider.m; sourceTree = "<group>"; };
@@ -338,8 +339,9 @@
 				B846BA3019BF554200BF47F4 /* PDCreationClient.h */,
 				B846BA3319BF56A900BF47F4 /* PDDeletionClient.h */,
 				B846BA2419BEC6EC00BF47F4 /* PDDeserializer.h */,
-				B846BA2119BEC5A900BF47F4 /* PDDomainObjectClient.h */,
-				B846BA2219BEC5A900BF47F4 /* PDDomainObjectClient.m */,
+				B824AA3719C72D440072D517 /* PDDomainObjectClient.h */,
+				B824AA3819C72D8A0072D517 /* PDDomainObjectClientProvider.h */,
+				B824AA3919C72D8A0072D517 /* PDDomainObjectClientProvider.m */,
 				B846BA1519BEB54400BF47F4 /* PDHTTPClient.h */,
 				B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */,
 				B846BA1A19BEC17200BF47F4 /* PDJSONClient.h */,
@@ -378,7 +380,7 @@
 		B878247A19BD1B5C00E041FB /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm */,
+				B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm */,
 				B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */,
 				B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */,
 				B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */,
@@ -695,8 +697,8 @@
 				B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */,
 				B82CCCC319C00EEF005AAC92 /* PDParameterToQueryStringEncoder.m in Sources */,
 				B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */,
+				B824AA3A19C72D8A0072D517 /* PDDomainObjectClientProvider.m in Sources */,
 				B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */,
-				B846BA2319BEC5A900BF47F4 /* PDDomainObjectClient.m in Sources */,
 				B878249619BD1DF100E041FB /* PDURLSessionClient.m in Sources */,
 				B846BA1C19BEC17200BF47F4 /* PDJSONClient.m in Sources */,
 				B846BA1719BEB54400BF47F4 /* PDHTTPClient.m in Sources */,
@@ -707,7 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientSpec.mm in Sources */,
+				B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm in Sources */,
 				B846BA1919BEBEF000BF47F4 /* PDJSONClientSpec.mm in Sources */,
 				B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */,
 				B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */,

@@ -21,12 +21,12 @@ SPEC_BEGIN(PDNetworkClientProviderSpec)
 describe(@"PDNetworkClientProvider", ^{
     __block PDNetworkClientProvider *subject;
     __block id<PDNetworkResource> networkResource;
-    __block PDDomainObjectClient *domainObjectClient;
+    __block id<PDDomainObjectClient> domainObjectClient;
     __block id<PDRequestParametersSerializer> requestParametersSerializer;
     __block id<PDDeserializer> deserializer;
     
     beforeEach(^{
-        domainObjectClient = nice_fake_for([PDDomainObjectClient class]);
+        domainObjectClient = nice_fake_for(@protocol(PDDomainObjectClient));
         networkResource = nice_fake_for(@protocol(PDNetworkResource));
         requestParametersSerializer = nice_fake_for(@protocol(PDRequestParametersSerializer));
         deserializer = nice_fake_for(@protocol(PDDeserializer));

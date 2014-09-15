@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
 
 
-@class PDDomainObjectClient;
+@protocol PDDomainObjectClient;
 @protocol PDNetworkResource;
 
 
 @interface PDNetworkClientProvider : NSObject
 
 - (id)networkClientWithNetworkResource:(id<PDNetworkResource>)networkResource
-                    domainObjectClient:(PDDomainObjectClient *)domainObjectClient;
+                    domainObjectClient:(id<PDDomainObjectClient>)domainObjectClient;
 
 @end

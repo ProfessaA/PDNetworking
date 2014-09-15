@@ -15,8 +15,8 @@
 
 @interface _PDBaseClient : NSObject
 
-@property (nonatomic) id <PDNetworkResource> networkResource;
-@property (nonatomic) PDDomainObjectClient *domainObjectClient;
+@property (nonatomic) id<PDNetworkResource> networkResource;
+@property (nonatomic) id<PDDomainObjectClient> domainObjectClient;
 
 @end
 
@@ -40,7 +40,7 @@
 @implementation PDNetworkClientProvider
 
 - (id)networkClientWithNetworkResource:(id<PDNetworkResource>)networkResource
-                    domainObjectClient:(PDDomainObjectClient *)domainObjectClient
+                    domainObjectClient:(id<PDDomainObjectClient>)domainObjectClient
 {
     _PDBaseClient *client;
     NSString *HTTPMethod = networkResource.HTTPMethod;
@@ -67,7 +67,7 @@
 @implementation _PDBaseClient
 
 - (instancetype)initWithNetworkResource:(id<PDNetworkResource>)networkResource
-                     domainObjectClient:(PDDomainObjectClient *)domainObjectClient
+                     domainObjectClient:(id<PDDomainObjectClient>)domainObjectClient
 {
     self = [super init];
     if (self) {
