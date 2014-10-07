@@ -53,10 +53,10 @@ describe(@"PDGenericDomainObjectClient", ^{
                 NSString *identifier = dictionaryParams[@"id"];
                 return [NSString stringWithFormat:@"%@.json", identifier];
             };
-            networkResource = [provider retrievalResourceWithPathConfigurationBlock:pathConfigurationBlock
-                                                        requestParametersSerializer:requestParametersSerializer
-                                                                       deserializer:deserializer];
-            
+            networkResource = [provider fetchResourceWithPathConfigurationBlock:pathConfigurationBlock
+                                                    requestParametersSerializer:requestParametersSerializer
+                                                                   deserializer:deserializer];
+
             requestParametersSerializer stub_method(@selector(serialize:error:))
                 .with(requestParameters, Arguments::anything)
                 .and_return(@{@"request": @"params"});

@@ -244,7 +244,7 @@
 		B846BA3019BF554200BF47F4 /* PDCreationClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDCreationClient.h; sourceTree = "<group>"; };
 		B846BA3219BF567C00BF47F4 /* PDUpdateClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDUpdateClient.h; sourceTree = "<group>"; };
 		B846BA3319BF56A900BF47F4 /* PDDeletionClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDeletionClient.h; sourceTree = "<group>"; };
-		B846BA3419BF56C900BF47F4 /* PDRetrievalClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRetrievalClient.h; sourceTree = "<group>"; };
+		B846BA3419BF56C900BF47F4 /* PDFetchClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFetchClient.h; sourceTree = "<group>"; };
 		B846BA3519BF56FC00BF47F4 /* PDNetworkClientProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDNetworkClientProvider.h; sourceTree = "<group>"; };
 		B846BA3619BF56FC00BF47F4 /* PDNetworkClientProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDNetworkClientProvider.m; sourceTree = "<group>"; };
 		B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDNetworkClientProviderSpec.mm; sourceTree = "<group>"; };
@@ -347,6 +347,9 @@
 				B824AA3719C72D440072D517 /* PDDomainObjectClient.h */,
 				B824AA3819C72D8A0072D517 /* PDDomainObjectClientProvider.h */,
 				B824AA3919C72D8A0072D517 /* PDDomainObjectClientProvider.m */,
+				B846BA3419BF56C900BF47F4 /* PDFetchClient.h */,
+				B8E879DE19C77F9E00004473 /* PDGenericDomainObjectClient.h */,
+				B8E879DF19C77F9E00004473 /* PDGenericDomainObjectClient.m */,
 				B846BA1519BEB54400BF47F4 /* PDHTTPClient.h */,
 				B846BA1619BEB54400BF47F4 /* PDHTTPClient.m */,
 				B846BA1A19BEC17200BF47F4 /* PDJSONClient.h */,
@@ -364,14 +367,11 @@
 				B87824A419BD1FE600E041FB /* PDRequester.h */,
 				B846BA2A19BECCCA00BF47F4 /* PDRequestParametersSerializer.h */,
 				B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */,
-				B846BA3419BF56C900BF47F4 /* PDRetrievalClient.h */,
 				B846BA3219BF567C00BF47F4 /* PDUpdateClient.h */,
 				B878249419BD1DF100E041FB /* PDURLSessionClient.h */,
 				B878249519BD1DF100E041FB /* PDURLSessionClient.m */,
 				B878246A19BD1AA700E041FB /* PDURLSessionClientDelegate.h */,
 				B85EDEA019BCFDC9001B6AF6 /* Supporting Files */,
-				B8E879DE19C77F9E00004473 /* PDGenericDomainObjectClient.h */,
-				B8E879DF19C77F9E00004473 /* PDGenericDomainObjectClient.m */,
 			);
 			path = PDNetworking;
 			sourceTree = "<group>";

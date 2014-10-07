@@ -21,9 +21,9 @@
 
 @implementation PDNetworkResourceProvider
 
-- (id<PDNetworkResource>)retrievalResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
-                                         requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
-                                                        deserializer:(id<PDDeserializer>)deserializer;
+- (id<PDNetworkResource>)fetchResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
+                                     requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
+                                                    deserializer:(id<PDDeserializer>)deserializer;
 {
     _PDNetworkResource *resource = [[_PDNetworkResource alloc] initWithPathConfigurationBlock:pathConfigurationBlock
                                                                   requestParametersSerializer:requestParametersSerializer

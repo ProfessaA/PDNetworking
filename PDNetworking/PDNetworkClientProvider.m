@@ -5,7 +5,7 @@
 #import "PDDomainObjectClient.h"
 #import "KSPromise.h"
 #import "PDCreationClient.h"
-#import "PDRetrievalClient.h"
+#import "PDFetchClient.h"
 #import "PDDeletionClient.h"
 #import "PDUpdateClient.h"
 
@@ -25,7 +25,7 @@
 @end
 
 
-@interface _PDRetrievalClient : _PDBaseClient <PDRetrievalClient>
+@interface _PDFetchClient : _PDBaseClient <PDFetchClient>
 @end
 
 
@@ -45,7 +45,7 @@
     _PDBaseClient *client;
     NSString *HTTPMethod = networkResource.HTTPMethod;
     if ([HTTPMethod isEqualToString:@"GET"]) {
-        client = [[_PDRetrievalClient alloc] init];
+        client = [[_PDFetchClient alloc] init];
     }
     else if ([HTTPMethod isEqualToString:@"POST"]) {
         client = [[_PDCreationClient alloc] init];
@@ -94,11 +94,11 @@
 @end
 
 
-@implementation _PDRetrievalClient
+@implementation _PDFetchClient
 
-#pragma mark - <PDRetrievalClient>
+#pragma mark - <PDFetchClient>
 
-- (KSPromise *)retrievalPromiseWithRequestParameters:(id)requestParameters
+- (KSPromise *)fetchPromiseWithRequestParameters:(id)requestParameters
 {
     id <PDNetworkResource> networkResource = self.networkResource;
     return [self.domainObjectClient promiseWithNetworkResource:networkResource

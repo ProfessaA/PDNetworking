@@ -8,9 +8,9 @@
 
 @interface PDNetworkResourceProvider : NSObject
 
-- (id<PDNetworkResource>)retrievalResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
-                                         requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
-                                                        deserializer:(id<PDDeserializer>)deserializer;
+- (id<PDNetworkResource>)fetchResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
+                                     requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer
+                                                    deserializer:(id<PDDeserializer>)deserializer;
 
 - (id<PDNetworkResource>)creationResourceWithPathConfigurationBlock:(NSString * (^)(id))pathConfigurationBlock
                                         requestParametersSerializer:(id<PDRequestParametersSerializer>)requestParametersSerializer

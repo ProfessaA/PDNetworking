@@ -6,7 +6,7 @@
 #import "PDDeserializer.h"
 #import "KSDeferred.h"
 #import "PDNetworkResource.h"
-#import "PDRetrievalClient.h"
+#import "PDFetchClient.h"
 #import <objc/message.h>
 #import "PDUpdateClient.h"
 #import "PDDeletionClient.h"
@@ -83,8 +83,8 @@ describe(@"PDNetworkClientProvider", ^{
     };
     
     itShouldReturnAtNetworkClient(@"GET",
-                                  @protocol(PDRetrievalClient),
-                                  @selector(retrievalPromiseWithRequestParameters:));
+                                  @protocol(PDFetchClient),
+                                  @selector(fetchPromiseWithRequestParameters:));
     
     itShouldReturnAtNetworkClient(@"POST",
                                   @protocol(PDCreationClient),

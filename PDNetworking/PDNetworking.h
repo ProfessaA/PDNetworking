@@ -13,7 +13,7 @@
 #import "PDRequester.h"
 #import "PDRequestParametersSerializer.h"
 #import "PDRequestProvider.h"
-#import "PDRetrievalClient.h"
+#import "PDFetchClient.h"
 #import "PDUpdateClient.h"
 #import "PDURLSessionClient.h"
 #import "PDURLSessionClientDelegate.h"
