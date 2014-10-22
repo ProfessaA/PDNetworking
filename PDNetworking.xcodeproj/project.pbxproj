@@ -16,7 +16,7 @@
 		B846BA1C19BEC17200BF47F4 /* PDJSONClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1B19BEC17200BF47F4 /* PDJSONClient.m */; };
 		B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm */; };
 		B846BA2719BEC7C200BF47F4 /* PDJSONRequestProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */; };
-		B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */; };
+		B846BA2919BEC80300BF47F4 /* PDJSONRequestProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2819BEC80300BF47F4 /* PDJSONRequestProviderSpec.mm */; };
 		B846BA2F19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA2E19BEDB2D00BF47F4 /* PDNetworkResourceProvider.m */; };
 		B846BA3719BF56FC00BF47F4 /* PDNetworkClientProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B846BA3619BF56FC00BF47F4 /* PDNetworkClientProvider.m */; };
 		B846BA3919BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */; };
@@ -235,7 +235,7 @@
 		B846BA2419BEC6EC00BF47F4 /* PDDeserializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDDeserializer.h; sourceTree = "<group>"; };
 		B846BA2519BEC7C200BF47F4 /* PDJSONRequestProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDJSONRequestProvider.h; sourceTree = "<group>"; };
 		B846BA2619BEC7C200BF47F4 /* PDJSONRequestProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDJSONRequestProvider.m; sourceTree = "<group>"; };
-		B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDRequestProviderSpec.mm; sourceTree = "<group>"; };
+		B846BA2819BEC80300BF47F4 /* PDJSONRequestProviderSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PDJSONRequestProviderSpec.mm; sourceTree = "<group>"; };
 		B846BA2A19BECCCA00BF47F4 /* PDRequestParametersSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequestParametersSerializer.h; sourceTree = "<group>"; };
 		B846BA2B19BECD4100BF47F4 /* PDNetworkResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDNetworkResource.h; sourceTree = "<group>"; };
 		B846BA2C19BED5AE00BF47F4 /* PDRequestProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDRequestProvider.h; sourceTree = "<group>"; };
@@ -388,13 +388,13 @@
 			isa = PBXGroup;
 			children = (
 				B846BA1F19BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm */,
+				B8E879F419C7805800004473 /* PDGenericDomainObjectClientSpec.mm */,
 				B846BA1319BEB51900BF47F4 /* PDHTTPClientSpec.mm */,
 				B846BA1819BEBEF000BF47F4 /* PDJSONClientSpec.mm */,
 				B846BA3819BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm */,
-				B846BA2819BEC80300BF47F4 /* PDRequestProviderSpec.mm */,
+				B846BA2819BEC80300BF47F4 /* PDJSONRequestProviderSpec.mm */,
 				B878248019BD1B5C00E041FB /* PDURLSessionClientSpec.mm */,
 				B878247B19BD1B5C00E041FB /* Supporting Files */,
-				B8E879F419C7805800004473 /* PDGenericDomainObjectClientSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -722,7 +722,7 @@
 				B846BA2019BEC55E00BF47F4 /* PDDomainObjectClientProviderSpec.mm in Sources */,
 				B846BA1919BEBEF000BF47F4 /* PDJSONClientSpec.mm in Sources */,
 				B878248119BD1B5C00E041FB /* PDURLSessionClientSpec.mm in Sources */,
-				B846BA2919BEC80300BF47F4 /* PDRequestProviderSpec.mm in Sources */,
+				B846BA2919BEC80300BF47F4 /* PDJSONRequestProviderSpec.mm in Sources */,
 				B846BA1419BEB51900BF47F4 /* PDHTTPClientSpec.mm in Sources */,
 				B846BA3919BF5AAA00BF47F4 /* PDNetworkClientProviderSpec.mm in Sources */,
 			);
