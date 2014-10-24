@@ -36,9 +36,13 @@
 {
     KSDeferred *deferred = [KSDeferred defer];
     id <PDRequestParametersSerializer> serializer = networkResource.requestParametersSerializer;
-    
-    NSError *serializationError;
-    NSDictionary *parameters = [serializer serialize:requestParameters error:&serializationError];
+
+    NSDictionary *parameters = requestParameters;
+    NSError *serializationError = nil;
+    if (serializer) {
+        parameters = [serializer serialize:requestParameters error:&serializationError];
+    }
+
     if (!serializationError) {
         NSString *HTTPMethod = networkResource.HTTPMethod;
         NSString *path = networkResource.pathConfigurationBlock(requestParameters);
